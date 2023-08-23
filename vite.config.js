@@ -6,6 +6,8 @@ import UnoCSS from "unocss/vite";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,11 +15,29 @@ export default defineConfig({
     vue(),
     UnoCSS(),
     AutoImport({
-      resolvers: [ElementPlusResolver()],
+      imports: ['vue'],
+      resolvers: [
+        // Auto import icon components
+        // 自动导入图标组件
+        IconsResolver({
+          prefix: 'Icon',
+        }),
+        ElementPlusResolver(),
+      ],
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [
+        // Auto register icon components
+        // 自动注册图标组件
+        IconsResolver({
+          enabledCollections: ['ep'],
+        }),
+        ElementPlusResolver(),
+      ],
     }),
+    Icons({
+      autoInstall: true,
+    })
   ],
   resolve: {
     alias: {
