@@ -1,6 +1,9 @@
 <template>
   <!-- v-for -->
-  <div class="flex flex-items-center flex-justify-between mb-1rem">
+  <div
+    flex="~ items-center justify-between"
+    m="b-1rem"
+  >
     <div>
       <!-- 日期 -->
       <span class="text-gray">
@@ -15,7 +18,10 @@
       <!--特殊房價 -->
       <span>特殊房價：{{ priceInfo.price }}</span>
     </div>
-    <div class="flex flex-items-center gap-1rem">
+    <div 
+      flex="~ items-center"
+      gap="1rem"
+    >
       <IEpEditPen class="cursor-pointer" @click="$emit('edit')"/>
       <IEpDelete class="cursor-pointer" @click="$emit('delete')"/>
     </div>
