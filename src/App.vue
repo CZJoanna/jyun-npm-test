@@ -72,7 +72,7 @@
       :clearable="false"
     />
   </div>
-  <div flex="~ col- items-start">
+  <div flex="~ col items-start">
     <span>房價</span>
     <el-input-number
       v-model="editInfo.price"
