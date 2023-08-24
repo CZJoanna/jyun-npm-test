@@ -1,16 +1,16 @@
 <template>
-  <div b="solid 10 #f8f8f8">
+  <div un-b="solid 10 #f8f8f8">
     <div class="bg-#f8f8f8">
-        <h2 class="text-center text-1rem">{{ roomType.name }}</h2>
+        <h2 un-text="center 1rem">{{ roomType.name }}</h2>
     </div>
     <div class="p-1rem">
       <!--平假旺 -->
-      <div flex="~ justify-between">
+      <div un-flex="~ justify-between">
         <div 
         v-for="(dateType, i) in dateTypes" 
         :key="dateType"
         >
-        <div flex="~ col items-center">
+        <div un-flex="~ col items-center">
           <span>{{ dateType }}</span>
           <div>
             <el-input-number

@@ -58,8 +58,8 @@
   </el-dialog>
   <el-dialog v-model="dialogEditVisible" title="編輯特殊房價">
   <div
-    flex="~ col items-start"
-    m="b-1rem"
+    un-flex="~ col items-start"
+    un-m="b-1rem"
   >
     <span>日期</span>
     <el-date-picker
@@ -82,8 +82,8 @@
   </div>
 
   <div 
-    flex="~ col item-start"
-    m="b-1rem"
+    un-flex="~ col item-start"
+    un-m="b-1rem"
   >
     <span>適用在星期幾?</span>
     <div>
@@ -99,15 +99,15 @@
 
   </el-dialog>
   <div class="p-1rem">
-    <div flex="~ justify-between">
+    <div un-flex="~ justify-between">
       <h2>房型價格表</h2>
       <el-button @click="dialogTableVisible = true">
         ＋新增特殊房價
       </el-button>
     </div>
     <div
-      grid="~ sm:cols-2 md:cols-3 lg:cols-4"
-      gap="1rem"
+      un-grid="~ sm:cols-2 md:cols-3 lg:cols-4"
+      un-gap="1rem"
     >
        <RoomCard
         v-for="roomType in roomTypes"

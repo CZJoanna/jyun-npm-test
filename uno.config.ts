@@ -3,7 +3,10 @@ import { defineConfig, presetAttributify, presetUno } from 'unocss'
 
 export default defineConfig({
   presets: [
-    presetAttributify({ /* preset options */}),
+    presetAttributify({ 
+      prefix: 'un-',
+      prefixedOnly: true
+    }),
     presetUno(),
     // ...custom presets
   ],
